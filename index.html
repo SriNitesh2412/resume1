@@ -1,8 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#17120e"><meta name="description" content="Sri Nitesh S — AI & Data Science engineering student, developer and technology enthusiast.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17120e">
+<meta name="description" content="Sri Nitesh S — AI & Data Science engineering student, developer and technology enthusiast.">
 <title>Sri Nitesh S | Portfolio</title>
 <style>
-:root{--ink:#17120e;--paper:#f6f4e9;--orange:#ff9f0a;--muted:#a9a49a;--line:rgba(255,255,255,.13);--blue:#67aee9}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1160px,90%);margin:auto}.nav-wrap{position:sticky;top:0;z-index:10;background:rgba(23,18,14,.94);backdrop-filter:blur(16px);color:#fff;border-bottom:1px solid var(--line)}nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:850;font-size:1.18rem;letter-spacing:-.04em}.brand span{color:var(--orange)}.nav-links{display:flex;align-items:center;gap:30px;font-size:.88rem;color:#ded8ce}.nav-links a:hover{color:var(--orange)}.nav-cta,.btn{border:0;border-radius:999px;padding:13px 20px;background:var(--orange);color:var(--ink);font-weight:800;display:inline-flex;align-items:center;gap:9px;cursor:pointer;transition:.2s}.nav-cta:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px #ff9f0a35}.menu-btn{display:none;background:none;color:white;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:1.2rem}.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:112px 0 124px}.hero:before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:#ff9f0a18;right:-140px;top:-180px;filter:blur(2px)}.hero-grid{position:relative;display:grid;grid-template-columns:1fr;align-items:center;max-width:980px}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--orange);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800}.eyebrow:before{content:"";width:27px;height:2px;background:var(--orange)}h1{font-size:clamp(3.1rem,7vw,6.2rem);line-height:.98;letter-spacing:-.075em;margin:24px 0}h1 em{font-style:normal;color:var(--orange)}.hero p{color:#c9c3b9;line-height:1.8;max-width:680px;font-size:1.05rem}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.btn-outline{border:1px solid #ffffff55;border-radius:999px;padding:13px 20px;color:#fff;font-weight:700}.btn-outline:hover{border-color:var(--orange);color:var(--orange)}.hero-note{font-size:.8rem!important;color:#8e887e!important;margin-top:28px}.ticker{background:var(--orange);padding:17px 0;overflow:hidden;color:var(--ink);font-weight:900;letter-spacing:.1em;text-transform:uppercase;font-size:.85rem}.ticker-line{display:flex;justify-content:space-around;gap:30px;white-space:nowrap}.ticker span:after{content:"✳";margin-left:35px}.section{padding:100px 0}.section-dark{background:var(--ink);color:#fff}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:44px}.kicker{color:#d98a08;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:900}.section h2{font-size:clamp(2.2rem,4vw,3.6rem);letter-spacing:-.06em;margin:10px 0 0;line-height:1.05}.section-head p{color:#817b72;max-width:380px;line-height:1.7;margin:0}.section-dark .section-head p{color:#aaa39a}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.about-copy{font-size:1.12rem;line-height:1.9;color:#58534c}.about-copy strong{color:var(--ink)}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.stat{background:#fff;border:1px solid #e8e3d7;border-radius:18px;padding:25px}.stat strong{display:block;font-size:2rem;letter-spacing:-.06em}.stat span{font-size:.82rem;color:#777}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#211b16;border:1px solid var(--line);border-radius:20px;padding:27px;min-height:235px;transition:.25s}.card:hover{transform:translateY(-7px);border-color:#ff9f0a88}.card-num{color:var(--orange);font-size:.75rem;font-weight:900;letter-spacing:.1em}.card h3{font-size:1.35rem;margin:24px 0 10px}.card p{color:#b4ada3;line-height:1.7;font-size:.93rem}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{font-size:.72rem;border-radius:99px;padding:7px 11px;background:#ffffff12;color:#e9e2d8}.project{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center;background:#fff;border:1px solid #e8e3d7;border-radius:24px;padding:35px}.project-art{min-height:270px;border-radius:18px;background:linear-gradient(145deg,#201811,#392615);display:grid;place-items:center;position:relative;overflow:hidden}.project-art:before,.project-art:after{content:"";position:absolute;border:1px solid #ff9f0a66;border-radius:50%;width:250px;height:250px}.project-art:after{width:180px;height:180px}.project-mark{z-index:1;width:100px;height:100px;border-radius:28px;background:var(--orange);display:grid;place-items:center;font-size:2.4rem;font-weight:950;box-shadow:0 15px 40px #0006}.project h3{font-size:2rem;letter-spacing:-.05em;margin:12px 0}.project p{color:#625c54;line-height:1.8}.text-link{display:inline-flex;gap:9px;color:#b76d00;font-weight:800;margin-top:10px}.timeline{display:grid;grid-template-columns:1fr 1fr;gap:22px}.timeline-item{border-left:2px solid var(--orange);padding:5px 0 8px 22px}.timeline-item small{color:var(--orange);font-weight:800}.timeline-item h3{margin:8px 0;font-size:1.1rem}.timeline-item p{color:#aaa39a;line-height:1.6;margin:0;font-size:.9rem}.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 55px}.skill{display:grid;grid-template-columns:130px 1fr;align-items:center;gap:15px;margin:13px 0}.skill label{font-weight:700;color:#e9e2d8;font-size:.9rem}.track{height:8px;background:#ffffff20;border-radius:99px;over
+:root{--ink:#17120e;--paper:#f6f4e9;--orange:#ff9f0a;--muted:#a9a49a;--line:rgba(255,255,255,.13);--blue:#67aee9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.wrap{width:min(1160px,90%);margin:auto}
+.nav-wrap{position:sticky;top:0;z-index:10;background:rgba(23,18,14,.94);backdrop-filter:blur(16px);color:#fff;border-bottom:1px solid var(--line)}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:850;font-size:1.18rem;letter-spacing:-.04em}
+.brand span{color:var(--orange)}
+.nav-links{display:flex;align-items:center;gap:30px;font-size:.88rem;color:#ded8ce}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta,.btn{border:0;border-radius:999px;padding:13px 20px;background:var(--orange);color:var(--ink);font-weight:800;display:inline-flex;align-items:center;gap:9px;cursor:pointer;transition:.2s}
+.nav-cta:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px #ff9f0a35}
+.menu-btn{display:none;background:none;color:white;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:1.2rem}
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:112px 0 124px}
+.hero:before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:#ff9f0a18;right:-140px;top:-180px;filter:blur(2px)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1fr;align-items:center;max-width:980px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--orange);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+.eyebrow:before{content:"";width:27px;height:2px;background:var(--orange)}
+h1{font-size:clamp(3.1rem,7vw,6.2rem);line-height:.98;letter-spacing:-.075em;margin:24px 0}
+h1 em{font-style:normal;color:var(--orange)}
+.hero p{color:#c9c3b9;line-height:1.8;max-width:680px;font-size:1.05rem}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn-outline{border:1px solid #ffffff55;border-radius:999px;padding:13px 20px;color:#fff;font-weight:700}
+.btn-outline:hover{border-color:var(--orange);color:var(--orange)}
+.hero-note{font-size:.8rem!important;color:#8e887e!important;margin-top:28px}
+.ticker{background:var(--orange);padding:17px 0;overflow:hidden;color:var(--ink);font-weight:900;letter-spacing:.1em;text-transform:uppercase;font-size:.85rem}
+.ticker-line{display:flex;justify-content:space-around;gap:30px;white-space:nowrap}
+.ticker span:after{content:"✳";margin-left:35px}
+.section{padding:100px 0}
+.section-dark{background:var(--ink);color:#fff}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:44px}
+.kicker{color:#d98a08;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:900}
+.section h2{font-size:clamp(2.2rem,4vw,3.6rem);letter-spacing:-.06em;margin:10px 0 0;line-height:1.05}
+.section-head p{color:#817b72;max-width:380px;line-height:1.7;margin:0}
+.section-dark .section-head p{color:#aaa39a}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.about-copy{font-size:1.12rem;line-height:1.9;color:#58534c}
+.about-copy strong{color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.stat{background:#fff;border:1px solid #e8e3d7;border-radius:18px;padding:25px}
+.stat strong{display:block;font-size:2rem;letter-spacing:-.06em}
+.stat span{font-size:.82rem;color:#777}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#211b16;border:1px solid var(--line);border-radius:20px;padding:27px;min-height:235px;transition:.25s}
+.card:hover{transform:translateY(-7px);border-color:#ff9f0a88}
+.card-num{color:var(--orange);font-size:.75rem;font-weight:900;letter-spacing:.1em}
+.card h3{font-size:1.35rem;margin:24px 0 10px}
+.card p{color:#b4ada3;line-height:1.7;font-size:.93rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tag{font-size:.72rem;border-radius:99px;padding:7px 11px;background:#ffffff12;color:#e9e2d8}
+.project{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center;background:#fff;border:1px solid #e8e3d7;border-radius:24px;padding:35px}
+.project-art{min-height:270px;border-radius:18px;background:linear-gradient(145deg,#201811,#392615);display:grid;place-items:center;position:relative;overflow:hidden}
+.project-art:before,.project-art:after{content:"";position:absolute;border:1px solid #ff9f0a66;border-radius:50%;width:250px;height:250px}
+.project-art:after{width:180px;height:180px}
+.project-mark{z-index:1;width:100px;height:100px;border-radius:28px;background:var(--orange);display:grid;place-items:center;font-size:2.4rem;font-weight:950;box-shadow:0 15px 40px #0006}
+.project h3{font-size:2rem;letter-spacing:-.05em;margin:12px 0}
+.project p{color:#625c54;line-height:1.8}
+.text-link{display:inline-flex;gap:9px;color:#b76d00;font-weight:800;margin-top:10px}
+.timeline{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.timeline-item{border-left:2px solid var(--orange);padding:5px 0 8px 22px}
+.timeline-item small{color:var(--orange);font-weight:800}
+.timeline-item h3{margin:8px 0;font-size:1.1rem}
+.timeline-item p{color:#aaa39a;line-height:1.6;margin:0;font-size:.9rem}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 55px}
+.skill{display:grid;grid-template-columns:130px 1fr;align-items:center;gap:15px;margin:13px 0}
+.skill label{font-weight:700;color:#e9e2d8;font-size:.9rem}
+.track{height:8px;background:#ffffff20;border-radius:99px;overflow:hidden}
+.track i{height:100%;display:block;background:var(--orange);border-radius:99px}
+.cert{display:flex;gap:20px;align-items:flex-start;border:1px solid var(--line);border-radius:18px;padding:25px}
+.cert-icon{width:48px;height:48px;border-radius:14px;background:#ff9f0a1c;color:var(--orange);display:grid;place-items:center;font-size:1.4rem}
+.cert h3{margin:0 0 7px}
+.cert p{margin:0;color:#aaa39a;line-height:1.6}
+.contact-box{background:var(--orange);color:var(--ink);border-radius:26px;padding:48px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.contact-box h2{font-size:clamp(2rem,4vw,3.4rem);max-width:600px;margin:10px 0;letter-spacing:-.06em}
+.contact-box p{max-width:550px;line-height:1.7}
+.contact-box .btn{background:var(--ink);color:white;white-space:nowrap}
+.contact-details{display:flex;flex-wrap:wrap;gap:22px;margin-top:25px;font-size:.9rem;font-weight:700}
+.contact-details a:hover{text-decoration:underline}
+footer{background:var(--ink);color:#aaa39a;padding:28px 0;font-size:.82rem}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:none}
+#top{position:fixed;right:22px;bottom:22px;z-index:8;background:var(--orange);border:0;border-radius:50%;width:45px;height:45px;font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:.2s}
+#top.show{opacity:1;pointer-events:auto}
+.awards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.award-card{overflow:hidden;background:#fff;border:1px solid #e8e3d7;border-radius:18px;transition:transform .22s,box-shadow .22s}
+.award-card:hover{transform:translateY(-5px);box-shadow:0 14px 35px #17120e12}
+.award-image{height:205px;display:block;position:relative;background:#f0eee8;padding:10px;overflow:hidden}
+.award-image img{width:100%;height:100%;object-fit:contain;display:block}
+.image-hint{position:absolute;right:14px;bottom:13px;background:#17120edc;color:#fff;border-radius:99px;padding:7px 11px;font-size:.7rem;font-weight:700;opacity:0;transition:opacity .2s}
+.award-image:hover .image-hint{opacity:1}
+.award-info{padding:17px 19px 20px}
+.award-type{display:inline-block;color:#a86400;background:#fff1d6;border-radius:99px;padding:5px 9px;font-size:.67rem;font-weight:850;letter-spacing:.04em;text-transform:uppercase}
+.award-info h3{font-size:1.02rem;line-height:1.35;margin:11px 0 6px}
+.award-info p{color:#777168;font-size:.82rem;line-height:1.55;margin:0}
+@media(max-width:950px){.awards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){
+.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:#17120e;padding:25px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
+.nav-links.open{display:flex}
+.menu-btn{display:block}
+.nav-cta{display:none}
+.hero{padding:65px 0 80px}
+.hero-grid{grid-template-columns:1fr;gap:0}
+.section{padding:75px 0}
+.section-head{display:block}
+.section-head p{margin-top:15px}
+.about-grid,.project{grid-template-columns:1fr;gap:28px}
+.cards{grid-template-columns:1fr}
+.timeline{grid-template-columns:1fr}
+.skills-grid{grid-template-columns:1fr;gap:0}
+.contact-box{padding:30px;display:block}
+.contact-box .btn{margin-top:15px}
+}
+@media(max-width:560px){.awards-grid{grid-template-columns:1fr}.award-image{height:220px}}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*:before,*:after{transition:none!important;animation:none!important}
+.reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="nav-wrap">
+<nav class="wrap">
+<a class="brand" href="#home">NITESH<span>.</span></a>
+<div class="nav-links" id="navLinks">
+<a href="#about">About</a>
+<a href="#services">What I Do</a>
+<a href="#projects">Projects</a>
+<a href="#education">Education</a>
+<a href="#certificates">Certificates</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+<a class="nav-cta" href="#contact">Let's connect ↗</a>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+</nav>
+</div>
+
+<header class="hero" id="home">
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow">AI & Data Science Student</div>
+<h1>Hi, I'm<br><em>Sri Nitesh</em><br>S.</h1>
+<p>Engineering student, curious problem-solver and aspiring technology builder. I’m interested in Artificial Intelligence, Data Science and creating useful digital experiences.</p>
+<div class="hero-actions">
+<a class="btn" href="#projects">Explore my work <span>↗</span></a>
+<a class="btn-outline" href="#contact">Get in touch</a>
+</div>
+<p class="hero-note">LEARN&nbsp; · &nbsp;BUILD&nbsp; · &nbsp;GROW</p>
+</div>
+</div>
+</header>
+
+<div class="ticker">
+<div class="wrap ticker-line">
+<span>Artificial Intelligence</span>
+<span>Data Science</span>
+<span>Web Development</span>
+<span>Creative Problem Solving</span>
+</div>
+</div>
+
+<main>
+<section class="section" id="about">
+<div class="wrap">
+<div class="section-head reveal">
+<div><div class="kicker">A little about me</div><h2>Curiosity into<br>real-world ideas.</h2></div>
+<p>Motivated and dedicated engineering student with a strong interest in emerging technologies and continuous learning.</p>
+</div>
+<div class="about-grid">
+<p class="about-copy reveal">I’m pursuing a <strong>B.E. in Artificial Intelligence and Data Science</strong> at KPR Institute of Engineering and Technology. I enjoy exploring how technology can solve everyday problems, learning new tools and turning ideas into practical projects. My goal is to keep improving as a developer and contribute to meaningful technology solutions.</p>
+<div class="stats reveal">
+<div class="stat"><strong>AI + DS</strong><span>Area of study</span></div>
+<div class="stat"><strong>01</strong><span>Featured project</span></div>
+<div class="stat"><strong>3+</strong><span>Programming tools</span></div>
+<div class="stat"><strong>2</strong><span>Languages</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section section-dark" id="services">
+<div class="wrap">
+<div class="section-head reveal">
+<div><div class="kicker">What I do</div><h2>Interests & focus.</h2></div>
+<p>Areas I’m exploring as I develop my technical and creative skills.</p>
+</div>
+<div class="cards">
+<article class="card reveal">
+<div class="card-num">01 / THINK</div>
+<h3>Artificial Intelligence</h3>
+<p>Exploring AI concepts and how intelligent systems can support better decisions and personalized experiences.</p>
+<div class="tags"><span class="tag">AI</span><span class="tag">Problem solving</span></div>
+</article>
+<article class="card reveal">
+<div class="card-num">02 / BUILD</div>
+<h3>Web Development</h3>
+<p>Interested in building clean, responsive websites that make information and tools easy to use.</p>
+<div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+</article>
+<article class="card reveal">
+<div class="card-num">03 / EXPLORE</div>
+<h3>Data & Technology</h3>
+<p>Learning programming, databases and analytical thinking to understand problems and develop solutions.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">C / C++</span></div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="section" id="projects">
+<div class="wrap">
+<div class="section-head reveal">
+<div><div class="kicker">Selected work</div><h2>Ideas in progress.</h2></div>
+<p>A project focused on helping students discover their next learning and career steps.</p>
+</div>
+<article class="project reveal">
+<div class="project-art"><div class="project-mark">SM</div></div>
+<div>
+<div class="kicker">Featured project · AI / Web</div>
+<h3>SkillMirror AI</h3>
+<p>An AI-powered platform concept designed to help students with personalized career guidance, skill development and learning paths. The goal is to make it easier for students to understand their interests and plan what to learn next.</p>
+<div class="tags">
+<span class="tag" style="background:#fff0d5;color:#8a5700">Artificial Intelligence</span>
+<span class="tag" style="background:#fff0d5;color:#8a5700">Web Development</span>
+<span class="tag" style="background:#fff0d5;color:#8a5700">Career Development</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+
+<section class="section section-dark" id="education">
+<div class="wrap">
+<div class="section-head reveal">
+<div><div class="kicker">My journey</div><h2>Education.</h2></div>
+<p>My academic background and current learning journey.</p>
+</div>
+<div class="timeline">
+<div class="timeline-item reveal">
+<small>2022 — PRESENT</small>
+<h3>KPR Institute of Engineering and Technology</h3>
+<p>B.E. — Artificial Intelligence and Data Science (AI&DS)<br>Currently pursuing</p>
+</div>
+<div class="timeline-item reveal">
+<small>2025 — 2026</small>
+<h3>Bharathiyar Matric Higher Secondary School</h3>
+<p>HSC (12th)</p>
+</div>
+<div class="timeline-item reveal">
+<small>2023 — 2024</small>
+<h3>Bharathiyar Matric Higher Secondary School</h3>
+<p>SSLC (10th)</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="certificates">
+<div class="wrap">
+<div class="section-head reveal">
+<div><div class="kicker">Learning & recognition</div><h2>Certificates &<br>achievements.</h2></div>
+<p>A selection of courses, workshops and events completed along the way.</p>
+</div>
+<div class="awards-grid">
+<article class="award-card reveal">
+<div class="award-info">
+<span class="award-type">Hackathon</span>
+<h3>Smart India Hackathon 2026</h3>
+<p class="award-provider">KPR Institute of Engineering and Technology</p>
+<p>Internal Hackathon · Project: Skill Mirror AI</p>
+</div>
+</article>
+<article class="award-card reveal">
+<div class="award-info">
+<span class="award-type">Web Development</span>
+<h3>Full Stack Web Development</h3>
+<p class="award-provider">CodeEmy Technologies</p>
+<p>Workshop completion</p>
+</div>
+</article>
+<article class="award-card reveal">
+<div class="award-info">
+<span class="award-type">Machine Learning</span>
+<h3>Machine Learning for Beginners</h3>
+<p class="award-provider">Simplilearn SkillUp</p>
+<p>Online course completion</p>
+</div>
+</article>
+<article class="award-card reveal">
+<div class="award-info">
+<span class="award-type">Generative AI</span>
+<h3>Introduction to Generative AI Studio</h3>
+<p class="award-provider">Google Cloud · Simplilearn SkillUp</p>
+<p>Course completion</p>
+</div>
+</article>
+<article class="award-card reveal">
+<div class="award-info">
+<span class="award-type">Cloud & AI</span>
+<h3>AWS Certified AI Practitioner — Exam Prep</h3>
+<p class="award-provider">AWS Training and Certification</p>
+<p>Exam preparation plan overview</p>
+</div>
+</article>
+<article class="award-card reveal">
+<div class="award-info">
+<span class="award-type">Machine Learning</span>
+<h3>Machine Learning Onramp</h3>
+<p class="award-provider">MathWorks Training Services</p>
+<p>Self-paced training course · 100% completed</p>
+</div>
+</article>
+<article class="award-card reveal">
+<div class="award-info">
+<span class="award-type">Generative AI</span>
+<h3>Gemini Certified Student</h3>
+<p class="award-provider">Google for Education</p>
+<p>K12</p>
+</div>
+</article>
+<article class="award-card reveal">
+<div class="award-info">
+<span class="award-type">Artificial Intelligence</span>
+<h3>Introduction to Artificial Intelligence</h3>
+<p class="award-provider">Simplilearn SkillUp</p>
+<p>Course completion</p>
+</div>
+</article>
+<article class="award-card reveal">
+<div class="award-info">
+<span class="award-type">AI Workshop</span>
+<h3>Building Your Own AI Assistant</h3>
+<p class="award-provider">SriSHTi 2K26 · PSG College of Technology · Nandha Infotech</p>
+<p>From concept to implementation</p>
+</div>
+</article>
+<article class="award-card reveal">
+<div class="award-info">
+<span class="award-type">Participation</span>
+<h3>SriSHTi 2K26 — National Level Technical Symposium</h3>
+<p class="award-provider">PSG College of Technology · IEEE Students Chapter 12951</p>
+<p>Participation certificate</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="section section-dark" id="skills" style="padding-top:0">
+<div class="wrap">
+<div class="section-head reveal">
+<div><div class="kicker">Tools & strengths</div><h2>Skills I'm growing.</h2></div>
+<p>A snapshot of the technical and professional skills listed in my resume.</p>
+</div>
+<div class="skills-grid reveal">
+<div>
+<div class="skill"><label>C</label><div class="track"><i style="width:82%"></i></div></div>
+<div class="skill"><label>C++</label><div class="track"><i style="width:73%"></i></div></div>
+<div class="skill"><label>Python</label><div class="track"><i style="width:72%"></i></div></div>
+<div class="skill"><label>SQL</label><div class="track"><i style="width:72%"></i></div></div>
+</div>
+<div>
+<div class="skill"><label>Problem Solving</label><div class="track"><i style="width:82%"></i></div></div>
+<div class="skill"><label>Teamwork</label><div class="track"><i style="width:76%"></i></div></div>
+<div class="skill"><label>Communication</label><div class="track"><i style="width:72%"></i></div></div>
+<div class="skill"><label>Critical Thinking</label><div class="track"><i style="width:70%"></i></div></div>
+</div>
+</div>
+<p style="color:#817b72;font-size:.78rem;margin-top:18px">Progress bars are visual indicators, not formal test scores.</p>
+<div style="margin-top:42px" class="cert reveal">
+<div class="cert-icon">✳</div>
+<div>
+<h3>Waste to Wealth</h3>
+<p>Completed certification on innovative ways to convert waste into valuable resources for a sustainable future.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="wrap">
+<div class="contact-box reveal">
+<div>
+<div class="kicker" style="color:#6b4300">Have an idea?</div>
+<h2>Let's build something meaningful.</h2>
+<p>I'm open to learning opportunities, collaborations and conversations about technology and innovative ideas.</p>
+<div class="contact-details">
+<a href="mailto:srnitesh45@gmail.com" aria-label="Email Sri Nitesh">✉ srnitesh45@gmail.com</a>
+<a href="tel:+919043857387" aria-label="Call Sri Nitesh">☎ +91 9043857387</a>
+<a href="https://www.linkedin.com/in/sri-nitesh-s-017403439" target="_blank" rel="noopener noreferrer" aria-label="Open Sri Nitesh LinkedIn profile">in&nbsp; LinkedIn Profile ↗</a>
+<span>⌖ Coimbatore, Tamil Nadu, India</span>
+</div>
+</div>
+<a class="btn" href="mailto:srnitesh45@gmail.com">Say hello ↗</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap footer-inner">
+<span>© <span id="year"></span> Sri Nitesh S. All rights reserved.</span>
+<span>Designed with curiosity. Built with purpose.</span>
+<a href="#home">Back to top ↑</a>
+</div>
+</footer>
+
+<button id="top" aria-label="Back to top">↑</button>
+
+<script>
+const menuBtn=document.getElementById('menuBtn'),
+navLinks=document.getElementById('navLinks');
+
+menuBtn.addEventListener('click',()=>{
+navLinks.classList.toggle('open');
+menuBtn.textContent=navLinks.classList.contains('open')?'✕':'☰';
+});
+
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+navLinks.classList.remove('open');
+menuBtn.textContent='☰';
+}));
+
+document.getElementById('year').textContent=new Date().getFullYear();
+
+const topBtn=document.getElementById('top');
+
+window.addEventListener('scroll',()=>{
+topBtn.classList.toggle('show',window.scrollY>500);
+});
+
+topBtn.addEventListener('click',()=>{
+window.scrollTo({top:0,behavior:'smooth'});
+});
+
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+observer.unobserve(entry.target);
+}
+}),{threshold:.12});
+
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
