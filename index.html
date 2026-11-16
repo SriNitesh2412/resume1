@@ -94,18 +94,6 @@ footer{background:var(--ink);color:#aaa39a;padding:28px 0;font-size:.82rem}
 .reveal.visible{opacity:1;transform:none}
 #top{position:fixed;right:22px;bottom:22px;z-index:8;background:var(--orange);border:0;border-radius:50%;width:45px;height:45px;font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:.2s}
 #top.show{opacity:1;pointer-events:auto}
-.awards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.award-card{overflow:hidden;background:#fff;border:1px solid #e8e3d7;border-radius:18px;transition:transform .22s,box-shadow .22s}
-.award-card:hover{transform:translateY(-5px);box-shadow:0 14px 35px #17120e12}
-.award-image{height:205px;display:block;position:relative;background:#f0eee8;padding:10px;overflow:hidden}
-.award-image img{width:100%;height:100%;object-fit:contain;display:block}
-.image-hint{position:absolute;right:14px;bottom:13px;background:#17120edc;color:#fff;border-radius:99px;padding:7px 11px;font-size:.7rem;font-weight:700;opacity:0;transition:opacity .2s}
-.award-image:hover .image-hint{opacity:1}
-.award-info{padding:17px 19px 20px}
-.award-type{display:inline-block;color:#a86400;background:#fff1d6;border-radius:99px;padding:5px 9px;font-size:.67rem;font-weight:850;letter-spacing:.04em;text-transform:uppercase}
-.award-info h3{font-size:1.02rem;line-height:1.35;margin:11px 0 6px}
-.award-info p{color:#777168;font-size:.82rem;line-height:1.55;margin:0}
-@media(max-width:950px){.awards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:800px){
 .nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:#17120e;padding:25px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
 .nav-links.open{display:flex}
@@ -123,12 +111,24 @@ footer{background:var(--ink);color:#aaa39a;padding:28px 0;font-size:.82rem}
 .contact-box{padding:30px;display:block}
 .contact-box .btn{margin-top:15px}
 }
-@media(max-width:560px){.awards-grid{grid-template-columns:1fr}.award-image{height:220px}}
 @media(prefers-reduced-motion:reduce){
 html{scroll-behavior:auto}
 *,*:before,*:after{transition:none!important;animation:none!important}
 .reveal{opacity:1;transform:none}
 }
+.awards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.award-card{overflow:hidden;background:#fff;border:1px solid #e8e3d7;border-radius:18px;transition:transform .22s,box-shadow .22s}
+.award-card:hover{transform:translateY(-5px);box-shadow:0 14px 35px #17120e12}
+.award-image{height:205px;display:block;position:relative;background:#f0eee8;padding:10px;overflow:hidden}
+.award-image img{width:100%;height:100%;object-fit:contain;display:block}
+.image-hint{position:absolute;right:14px;bottom:13px;background:#17120edc;color:#fff;border-radius:99px;padding:7px 11px;font-size:.7rem;font-weight:700;opacity:0;transition:opacity .2s}
+.award-image:hover .image-hint{opacity:1}
+.award-info{padding:17px 19px 20px}
+.award-type{display:inline-block;color:#a86400;background:#fff1d6;border-radius:99px;padding:5px 9px;font-size:.67rem;font-weight:850;letter-spacing:.04em;text-transform:uppercase}
+.award-info h3{font-size:1.02rem;line-height:1.35;margin:11px 0 6px}
+.award-info p{color:#777168;font-size:.82rem;line-height:1.55;margin:0}
+@media(max-width:950px){.awards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.awards-grid{grid-template-columns:1fr}.award-image{height:220px}}
 </style>
 </head>
 <body>
@@ -178,7 +178,10 @@ html{scroll-behavior:auto}
 <section class="section" id="about">
 <div class="wrap">
 <div class="section-head reveal">
-<div><div class="kicker">A little about me</div><h2>Curiosity into<br>real-world ideas.</h2></div>
+<div>
+<div class="kicker">A little about me</div>
+<h2>Curiosity into<br>real-world ideas.</h2>
+</div>
 <p>Motivated and dedicated engineering student with a strong interest in emerging technologies and continuous learning.</p>
 </div>
 <div class="about-grid">
@@ -384,10 +387,7 @@ html{scroll-behavior:auto}
 <p style="color:#817b72;font-size:.78rem;margin-top:18px">Progress bars are visual indicators, not formal test scores.</p>
 <div style="margin-top:42px" class="cert reveal">
 <div class="cert-icon">✳</div>
-<div>
-<h3>Waste to Wealth</h3>
-<p>Completed certification on innovative ways to convert waste into valuable resources for a sustainable future.</p>
-</div>
+<div><h3>Waste to Wealth</h3><p>Completed certification on innovative ways to convert waste into valuable resources for a sustainable future.</p></div>
 </div>
 </div>
 </section>
@@ -423,8 +423,8 @@ html{scroll-behavior:auto}
 <button id="top" aria-label="Back to top">↑</button>
 
 <script>
-const menuBtn=document.getElementById('menuBtn'),
-navLinks=document.getElementById('navLinks');
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
 
 menuBtn.addEventListener('click',()=>{
 navLinks.classList.toggle('open');
@@ -439,14 +439,8 @@ menuBtn.textContent='☰';
 document.getElementById('year').textContent=new Date().getFullYear();
 
 const topBtn=document.getElementById('top');
-
-window.addEventListener('scroll',()=>{
-topBtn.classList.toggle('show',window.scrollY>500);
-});
-
-topBtn.addEventListener('click',()=>{
-window.scrollTo({top:0,behavior:'smooth'});
-});
+window.addEventListener('scroll',()=>topBtn.classList.toggle('show',window.scrollY>500));
+topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
 if(entry.isIntersecting){
@@ -457,6 +451,5 @@ observer.unobserve(entry.target);
 
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
-
 </body>
 </html>
